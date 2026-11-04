@@ -21,9 +21,14 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Environment files
+.env
+.env.*
+!.env.example
+
 # ==========================================
 # Sistema Operativo y Editor
 # ==========================================
 .DS_Store
 Thumbs.db
-.vscode/
+/.vscode/
