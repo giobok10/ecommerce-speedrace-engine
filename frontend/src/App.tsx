@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ControlPanel } from './components/ControlPanel';
 import { TelemetryCard } from './components/TelemetryCard';
+import { AmortizationCard } from './components/AmortizationCard';
 import type { SearchResult } from './types/engine';
 
 export function App() {
@@ -10,7 +11,7 @@ export function App() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '24px', fontFamily: 'system-ui, sans-serif' }}>
       <header style={{ textAlign: 'center', marginBottom: '24px' }}>
-        <h1 style={{ marginBottom: '8px' }}>E-Commerce SKU Audit & Speed-Race Engine</h1>
+        <h1 style={{ marginBottom: '8px' }}>🏎️ E-Commerce SKU Audit & Speed-Race Engine</h1>
         <p style={{ color: '#666', marginTop: 0 }}>
           Simulador de rendimiento algorítmico en tiempo real sobre catálogo RAM (1,000,000 SKUs)
         </p>
@@ -34,6 +35,8 @@ export function App() {
         </div>
 
         <TelemetryCard result={searchResult} />
+
+        <AmortizationCard />
       </main>
     </div>
   );
