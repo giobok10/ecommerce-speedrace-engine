@@ -1,0 +1,22 @@
+services:
+  # Servicio 1: API REST en .NET 8
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: speedrace-backend
+    ports:
+      - "5121:5121"
+    restart: always
+
+  # Servicio 2: Frontend React 19 + Nginx
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: speedrace-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
